@@ -8,3 +8,15 @@ Cisco Cloud CTO, Lew Tucker cloud computing overview: https://www.youtube.com/wa
 
 Cisco OpenStack Router Overview: https://www.youtube.com/watch?v=MtCRx8F52kc
 
+## Mentors
+- Bob Melander
+- Sridar Kandaswamy
+- Dipa Thakker
+
+## Developers
+
+- Aastha Anand
+- Chaitanya Kulkarni
+- Gabrielle Belok
+
+
