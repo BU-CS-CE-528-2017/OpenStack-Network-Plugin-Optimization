@@ -1,0 +1,95 @@
+<!DOCTYPE>
+<html lang="en-US">
+<html>
+
+<head>
+  <div style="padding-bottom: 20px;padding-top: 10px">
+	<img src="openstack-logo.png" style="height:90px;  ">
+	<img src="openstack.jpg" style="height:100px;  ">
+  </div>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover,.dropdown:hover {
+    background-color: #111;
+}
+li.dropdown {
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="homepage.html">Home</a></li>
+  <li class="dropdown">
+  	<a href="#"> Testing </a>
+  	<div class="dropdown-content">
+      <a href="testing_neutron.html">Neutron Tests</a>
+      <a href="testing_asr.html">Cisco: ASR 1000 Tests</a>
+      <a href="testing_user.html">User Test</a>
+    </div>
+    </li>
+  <li><a href="#"> About </a></li>
+</ul>
+ <div class="content">
+   <h1 style="text-align: center;font-size: 40px;">OpenStack Neutron : Network Performance</h1>
+   </div>
+   <div class="data" style="padding-left: 20px;">
+   <p>The Openstack website introduces OpenStack as a cloud operating system that controls large pools of compute, storage, and networking resources throughout a datacenter, all managed through a dashboard that gives administrators control while empowering their users to provision resources through a web interface. The Figure 1 gives an idea about Openstack as a cloud platform.</p></div>
+   <div class="img" style="text-align: center;">
+   <img src="openstack_diagram.png">
+   <p style="font-size: 15px"> Figure 1: Openstack (Source:<a href="https://www.openstack.org/software/">https://www.openstack.org/software</a>) </p>
+   <img src="coreservices.png">
+   <p style="font-size: 15px"> Figure 2: The core services provided by OpenStack (Source:<a href="https://www.openstack.org/software/">https://www.openstack.org/software</a>) </p>
+   </div>
+   <div class="data" style="padding-left: 20px; padding-right: 20px">
+   OpenStack is an open source cloud operating system that controls compute, storage, and networking resources throughout a datacenter. Administrators and users manage it through a dashboard to provision services through a web interface. The core services are Keystone (authentication service), Nova (compute service), Glance (image service), Cinder and Swift (storage) and Neutron (networking service).
+   <p>Performance and scalability testing are essential to any software application. In order to determine network performance certain measures such as bandwidth (maximum rate that information can be transferred), latency (the delay between the sender and the receiver decoding it) and throughput (the number of messages successfully delivered per unit time) are considered important. Scalability tests are used to determine the user limit for the web application and ensure end user experience, under a high load is not compromised.</p>
+<p>Currently, there are limitations of Openstack Neutron, which establishes open networking services for the cloud. Apart from single point failures, one major limitation of Neutron is that it cannot scale, so therefore for test deployments Nova-networking must replace Neutron.</p>
+
+
+   </div>
+
+
+</body>
+</html>
