@@ -8,7 +8,7 @@
 	<img src="openstack.jpg" style="height:100px;  ">
   </div>
 <style>
-ul {
+#nav_bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -57,9 +57,21 @@ li.dropdown {
     display: block;
 }
 </style>
+<script>
+function UserAction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "http://<host_ip>:8080/api/Kloudbuster/run_test/{session_id", false);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send();
+    var response = JSON.parse(xhttp.responseText);
+}
+  
+</script>
+
+
 </head>
 <body>
-<ul>
+<ul id="nav_bar">
   <li><a href="homepage.html">Home</a></li>
   <li class="dropdown">
   	<a href="#"> Testing </a>
@@ -74,6 +86,21 @@ li.dropdown {
  <div class="content">
    <h1 style="text-align: center;font-size: 40px"><b>Performance Tests on Openstack : Neutron</b></h1>
  </div>
+ <p style="font-size: 20px;"><strong>How good is your OpenStack data plane or storage service under real heavy load?</strong></p>
+ <p>KloudBuster is a tool that can load the data plane or storage infrastructure of any OpenStack cloud at massive scale and measure how well the cloud behaves under load where it matters: from the VMs standpoint, where cloud applications run.</p>
+ <p> For more information on Kloudbuster and its installation visit: <a href="http://kloudbuster.readthedocs.io/en/latest/" target="_blank"> Kloudbuster</a></p>
+ <h3>OpenStack Cloud Pre-Requisites</h3>
+ <p>OpenStack cloud pre-requisites to run KloudBuster:</p>
+ 
+ <ul>
+  <li>Neutron networking</li><br>
+  <li>Admin access to the cloud under test (non-admin might work with some tweaks and limitations)</li><br>
+  <li>3 available floating IPs if running the HTTP data plane scale test</li><br>
+  <li>2 available floating IPs if running the Storage scale test</li><br>
+  </ul>
+<p>You can begin your test session here:</p>
+<button type="submit" onclick="UserAction()">Begin Kloudbuster Session</button>
+
 
 </body>
 </html>
