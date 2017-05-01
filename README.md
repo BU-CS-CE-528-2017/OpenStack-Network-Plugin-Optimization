@@ -6,9 +6,9 @@ It is often difficult to predict what level of performance a user can expect for
 
 The Repository contains the Project Proposal which contains detailed information about the project including the project goals, Scope and features of the project, and other details. 
 
-Short project-cloud introduction video: https://www.youtube.com/watch?v=uPMrOnTrF0g
-Cisco Cloud CTO, Lew Tucker cloud computing overview: https://www.youtube.com/watch?v=olnLpuUDZv8
-Cisco OpenStack Router Overview: https://www.youtube.com/watch?v=MtCRx8F52kc
+* Short project-cloud introduction video: https://www.youtube.com/watch?v=uPMrOnTrF0g
+* Cisco Cloud CTO, Lew Tucker cloud computing overview: https://www.youtube.com/watch?v=olnLpuUDZv8
+* Cisco OpenStack Router Overview: https://www.youtube.com/watch?v=MtCRx8F52kc
 
 ## Mentors
 - Sridar Kandaswamy (CISCO)
