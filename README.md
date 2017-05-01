@@ -35,7 +35,7 @@ Since our project was based on OpenStack. We have penned down a complete documen
 
 Some OpenStack Python codes have been analyzed and put in. For complete information: https://github.com/openstack/neutron
 
-In order to try the web UI created by us for linking to KlouBuster, these are the requirements to OpenStack:
+In order to try the web UI created by us for linking to KloudBuster, these are the requirements to OpenStack:
 - Neutron networking
 - Admin access to the cloud under test (non-admin might work with some tweaks and limitations)
 - 3 available floating IPs if running the HTTP data plane scale test
