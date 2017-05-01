@@ -1,0 +1,53 @@
+2017-04-27 00:43:33.665 [00;32mDEBUG oslo_concurrency.lockutils [[01;36mreq-a2cd6448-794b-4066-ba57-1ff6b18efc77 [00;36madmin admin[00;32m] [01;35m[00;32mLock "c4a52036c48e943d56abfd566a7416f37a0b2620" released by "nova.virt.libvirt.imagebackend.fetch_func_sync" :: held 11.980s[00m [00;33mfrom (pid=25815) inner /usr/local/lib/python2.7/dist-packages/oslo_concurrency/lockutils.py:282[00m
+2017-04-27 00:43:33.666 [01;31mERROR nova.compute.manager [[01;36mreq-a2cd6448-794b-4066-ba57-1ff6b18efc77 [00;36madmin admin[01;31m] [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [01;31mInstance failed to spawn[00m
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00mTraceback (most recent call last):
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/compute/manager.py", line 2218, in _build_resources
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    yield resources
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/compute/manager.py", line 2064, in _build_and_run_instance
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    block_device_info=block_device_info)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/virt/libvirt/driver.py", line 2772, in spawn
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    admin_pass=admin_password)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/virt/libvirt/driver.py", line 3190, in _create_image
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    instance, size, fallback_from_host)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/virt/libvirt/driver.py", line 6795, in _try_fetch_image_cache
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    size=size)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/virt/libvirt/imagebackend.py", line 251, in cache
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    *args, **kwargs)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/virt/libvirt/imagebackend.py", line 593, in create_image
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    prepare_template(target=base, max_size=size, *args, **kwargs)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/usr/local/lib/python2.7/dist-packages/oslo_concurrency/lockutils.py", line 271, in inner
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    return f(*args, **kwargs)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/virt/libvirt/imagebackend.py", line 241, in fetch_func_sync
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    fetch_func(target=target, *args, **kwargs)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/virt/libvirt/utils.py", line 429, in fetch_image
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    max_size=max_size)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/virt/images.py", line 120, in fetch_to_raw
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    max_size=max_size)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/virt/images.py", line 110, in fetch
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    IMAGE_API.download(context, image_href, dest_path=path)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/image/api.py", line 182, in download
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    dst_path=dest_path)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/image/glance.py", line 452, in download
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    {'path': dst_path, 'exception': ex})
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/usr/local/lib/python2.7/dist-packages/oslo_utils/excutils.py", line 220, in __exit__
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    self.force_reraise()
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/usr/local/lib/python2.7/dist-packages/oslo_utils/excutils.py", line 196, in force_reraise
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    six.reraise(self.type_, self.value, self.tb)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/opt/stack/nova/nova/image/glance.py", line 436, in download
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    for chunk in image_chunks:
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/usr/local/lib/python2.7/dist-packages/glanceclient/common/utils.py", line 477, in __iter__
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    for chunk in self.iterable:
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/usr/local/lib/python2.7/dist-packages/glanceclient/common/utils.py", line 426, in integrity_iter
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    for chunk in iter:
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/usr/local/lib/python2.7/dist-packages/glanceclient/common/http.py", line 293, in _close_after_stream
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    for chunk in response.iter_content(chunk_size=chunk_size):
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m  File "/usr/local/lib/python2.7/dist-packages/requests/models.py", line 663, in generate
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m    raise ChunkedEncodingError(e)
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00mChunkedEncodingError: ('Connection broken: IncompleteRead(0 bytes read)', IncompleteRead(0 bytes read))
+[01;31m2017-04-27 00:43:33.666 TRACE nova.compute.manager [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00m
+2017-04-27 00:43:33.667 [00;36mINFO nova.compute.manager [[01;36mreq-a2cd6448-794b-4066-ba57-1ff6b18efc77 [00;36madmin admin[00;36m] [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00;36mTerminating instance[00m
+2017-04-27 00:43:33.668 [00;32mDEBUG nova.compute.manager [[01;36mreq-a2cd6448-794b-4066-ba57-1ff6b18efc77 [00;36madmin admin[00;32m] [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00;32mStart destroying the instance on the hypervisor.[00m [00;33mfrom (pid=25815) _shutdown_instance /opt/stack/nova/nova/compute/manager.py:2330[00m
+2017-04-27 00:43:33.674 [00;36mINFO nova.virt.libvirt.driver [[00;36m-[00;36m] [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00;36mDuring wait destroy, instance disappeared.[00m
+2017-04-27 00:43:33.675 [00;32mDEBUG oslo_concurrency.processutils [[01;36mreq-a2cd6448-794b-4066-ba57-1ff6b18efc77 [00;36madmin admin[00;32m] [01;35m[00;32mRunning cmd (subprocess): mv /opt/stack/data/nova/instances/26f3c294-4a8d-43f2-8e1e-173dfd93a2a3 /opt/stack/data/nova/instances/26f3c294-4a8d-43f2-8e1e-173dfd93a2a3_del[00m [00;33mfrom (pid=25815) execute /usr/local/lib/python2.7/dist-packages/oslo_concurrency/processutils.py:344[00m
+2017-04-27 00:43:33.693 [00;32mDEBUG oslo_concurrency.processutils [[01;36mreq-a2cd6448-794b-4066-ba57-1ff6b18efc77 [00;36madmin admin[00;32m] [01;35m[00;32mCMD "mv /opt/stack/data/nova/instances/26f3c294-4a8d-43f2-8e1e-173dfd93a2a3 /opt/stack/data/nova/instances/26f3c294-4a8d-43f2-8e1e-173dfd93a2a3_del" returned: 0 in 0.019s[00m [00;33mfrom (pid=25815) execute /usr/local/lib/python2.7/dist-packages/oslo_concurrency/processutils.py:374[00m
+2017-04-27 00:43:33.694 [00;36mINFO nova.virt.libvirt.driver [[01;36mreq-a2cd6448-794b-4066-ba57-1ff6b18efc77 [00;36madmin admin[00;36m] [01;35m[instance: 26f3c294-4a8d-43f2-8e1e-173dfd93a2a3] [00;36mDeleting instance files /opt/stack/data/nova/instances/26f3c294-4a8d-43f2-8e1e-173dfd93a2a3_del[00m
