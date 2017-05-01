@@ -10,20 +10,6 @@ The Repository contains the Project Proposal which contains detailed information
 * Cisco Cloud CTO, Lew Tucker cloud computing overview: https://www.youtube.com/watch?v=olnLpuUDZv8
 * Cisco OpenStack Router Overview: https://www.youtube.com/watch?v=MtCRx8F52kc
 
-## Mentors
-- Sridar Kandaswamy (CISCO)
-- Bob Melander (CISCO)
-- Dipa Thakker (CISCO)
-
-Special thanks to:
-- Shweta Padubidri (CISCO)
-- Yichen Wang (CISCO)
-
-## Developers
-- Aastha Anand
-- Chaitanya Kulkarni
-- Gabrielle Belok
-
 ### Repository Contents
 You can clone the Repository to be able to view and see all the contents. 
 
@@ -43,4 +29,17 @@ In order to try the web UI created by us for linking to KloudBuster, these are t
 
 For complete documentation to KloudBuster refer: http://kloudbuster.readthedocs.io/en/latest/readme.html
 
+## Mentors
+- Sridar Kandaswamy (CISCO)
+- Bob Melander (CISCO)
+- Dipa Thakker (CISCO)
+
+Special thanks to:
+- Shweta Padubidri (CISCO)
+- Yichen Wang (CISCO)
+
+## Developers
+- Aastha Anand
+- Chaitanya Kulkarni
+- Gabrielle Belok
 
