@@ -27,7 +27,12 @@ Special thanks to:
 ### Repository Contents
 You can clone the Repository to be able to view and see all the contents. 
 
+Pre-requisites:
+DevStack for OpenStack with Neutron is a requirement for this project.
+
+INSTALLATION:
 Since our project was based on OpenStack. We have penned down a complete documentation on how to correctly deploy DevStack for OpenStack. The document contains all the steps to be followed and some common errors have also been addressed.
+
 Some OpenStack Python codes have been analyzed and put in. For complete information: https://github.com/openstack/neutron
 
 In order to try the web UI created by us for linking to KlouBuster, these are the requirements to OpenStack:
@@ -36,6 +41,6 @@ In order to try the web UI created by us for linking to KlouBuster, these are th
 - 3 available floating IPs if running the HTTP data plane scale test
 - 2 available floating IPs if running the Storage scale test
 
-
+For complete documentation to KloudBuster refer: http://kloudbuster.readthedocs.io/en/latest/readme.html
 
 
