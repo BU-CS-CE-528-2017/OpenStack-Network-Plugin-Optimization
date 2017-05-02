@@ -1,0 +1,109 @@
+diff --git a/upper-constraints.txt b/upper-constraints.txt
+index 0cdcd13..f1e008e 100644
+--- a/upper-constraints.txt
++++ b/upper-constraints.txt
+@@ -1,5 +1,6 @@
++-e file:///opt/stack/networking-cisco#egg=networking-cisco
+ APScheduler===3.0.5
+-Babel===2.2.0
++Babel===2.3.4
+ CouchDB===1.0
+ Django===1.8.10
+ Flask===0.10.1
+@@ -136,7 +137,7 @@ futures===3.0.5
+ futurist===0.13.0
+ gabbi===1.12.0
+ gitdb===0.6.4
+-glance_store===0.13.1
++glance-store===0.13.1
+ gnocchiclient===2.2.0
+ google-api-python-client===1.5.0
+ graphviz===0.4.10
+@@ -144,6 +145,7 @@ greenlet===0.4.9
+ happybase===0.9;python_version=='2.7'
+ heat-translator===0.4.0
+ hgtools===6.5.1
++-e file:///opt/stack/horizon#egg=horizon
+ httplib2===0.9.2
+ idna===2.0
+ influxdb===2.12.0
+@@ -162,6 +164,7 @@ jsonschema===2.5.1
+ kafka-python===0.9.5
+ kazoo===2.2.1
+ keyring===8.4.1
++-e file:///opt/stack/keystone#egg=keystone
+ keystoneauth1===2.4.3
+ keystonemiddleware===4.4.1
+ klein===15.3.1
+@@ -183,6 +186,7 @@ netaddr===0.7.18
+ netifaces===0.10.4
+ netmiko===0.3.0
+ networkx===1.11
++-e file:///opt/stack/neutron#egg=neutron
+ neutron-lib===0.0.2
+ nodeenv===0.13.6
+ nose===1.3.7
+@@ -208,21 +212,21 @@ os-refresh-config===0.1.11
+ os-testr===0.6.0
+ os-win===0.4.2
+ oslo.cache===1.6.0
+-oslo.concurrency===3.7.1
+-oslo.config===3.9.0
+-oslo.context===2.2.0
++oslo.concurrency===3.8.0
++oslo.config===3.10.0
++oslo.context===2.4.0
+ oslo.db===4.7.1
+ oslo.i18n===3.5.0
+ oslo.log===3.3.0
+-oslo.messaging===4.6.1
++oslo.messaging===5.2.0
+ oslo.middleware===3.8.0
+ oslo.policy===1.6.0
+ oslo.privsep===1.4.0
+ oslo.reports===1.7.0
+ oslo.rootwrap===4.1.0
+ oslo.serialization===2.4.0
+-oslo.service===1.8.0
+-oslo.utils===3.8.0
++oslo.service===1.10.0
++oslo.utils===3.11.0
+ oslo.versionedobjects===1.8.0
+ oslo.vmware===2.5.0
+ oslosphinx===4.3.0
+@@ -235,7 +239,7 @@ pager===3.3
+ paramiko===1.16.0
+ passlib===1.6.5
+ pathlib===1.0.1;python_version=='2.7'
+-pbr===1.8.1
++pbr<2.0,>=1.3
+ pecan===1.0.4
+ pexpect===4.0.1
+ pika===0.10.0
+@@ -293,7 +297,7 @@ python-memcached===1.57
+ python-mimeparse===1.5.1
+ python-mistralclient===2.0.0
+ python-muranoclient===0.8.6
+-python-neutronclient===4.1.1
++-e file:///opt/stack/python-neutronclient#egg=python-neutronclient
+ python-novaclient===3.3.2
+ python-openstackclient===2.3.1
+ python-pytun===2.2.1
+@@ -314,7 +318,7 @@ rcssmin===1.0.6
+ redis===2.10.5
+ repoze.lru===0.6
+ repoze.who===2.2
+-requests===2.9.1
++requests===2.10.0
+ requests-aws===0.1.8
+ requests-kerberos===0.8.0;python_version=='2.7'
+ requests-mock===0.7.0
+@@ -343,7 +347,7 @@ sphinxcontrib-pecanwsme===0.8.0
+ sphinxcontrib-seqdiag===0.8.5
+ sqlalchemy-migrate===0.10.0
+ sqlparse===0.1.18
+-stevedore===1.12.0
++stevedore===1.20.0
+ suds-jurko===0.6
+ sysv-ipc===0.7.0
+ tablib===0.11.2
