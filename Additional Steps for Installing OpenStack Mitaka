@@ -1,0 +1,11 @@
+For ASR1k related development we use one of the older release which is named mitaka. To use the mitaka release, follow these steps
+In Devstack directory:
+git clone https://github.com/openstack-dev/devstack.git
+git checkout -b stable/mitaka origin/stable/mitaka
+git branch
+-you will see the following:
+  master
+* stable/mitaka
+ To check if you are using the mitaka branch use
+git branch.
+The * next to stable/mitaka shows the branch we are on.
