@@ -1,0 +1,26 @@
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+# This is an autoconfigured IPv6 interface
+
+auto enp4s0f0
+iface enp4s0f0 inet static
+  address 10.86.1.212
+  netmask 255.255.255.0
+  gateway 10.86.1.1
+  #dns-nameserver 173.36.131.10 8.8.8.8
+  dns-nameserver 8.8.8.8
+
+auto enp4s0f1
+iface enp4s0f1 inet static
+  address 192.168.1.212
+  netmask 255.255.255.0
+
+auto enp14s0
+iface enp14s0 inet manual
+        up ifconfig $IFACE 0.0.0.0 up
+        up ip link set $IFACE promisc on
+        down ip link set $IFACE promisc off
+        down ifconfig $IFACE down
